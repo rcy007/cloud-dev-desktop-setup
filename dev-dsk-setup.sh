@@ -217,7 +217,7 @@ echo -e "\n\n Installing Jupyter Notebook Extensions \n\n"
 
 pip install jupyterlab notebook
 
-pip install jupyter_contrib_nbextensions
+pip install jupyterlab_execute_time
 
 echo -e "\n\n Installing Apache Sedona and Dependencies \n\n"
 
