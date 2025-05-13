@@ -221,7 +221,7 @@ pip install jupyter_contrib_nbextensions
 
 echo -e "\n\n Installing Apache Sedona and Dependencies \n\n"
 
-pip install shapely geopandas attrs apache-sedona
+pip install shapely attrs apache-sedona
 
 echo -e "\n\n\n----------\n"
 
