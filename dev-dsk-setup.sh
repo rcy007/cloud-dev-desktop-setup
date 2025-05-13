@@ -16,7 +16,7 @@ echo -e "3 = Just Spark [Python 3.6+ and PIP should be pre-installed.] \n\n"
 
 echo -e "Enter your input [1/2/3]:"
 
-read var
+read -r var </dev/tty
 
 echo -e "Detecting Machine Architecture..."
 echo -e "\n\n\n"
@@ -40,7 +40,7 @@ esac
 while [ "${var:-0}" != 1 -a "${var:-0}" != 2 -a "${var:-0}" != 3 ]
 do
 	echo -e "Please choose between 1,2 or 3."
-	read var
+	read -r var </dev/tty
 done
 
 cd ~
