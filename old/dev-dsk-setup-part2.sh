@@ -4,21 +4,23 @@
 
 cd ~
 
-echo -e "\n\n Installing Anaconda - Python - Jupyter \n\n"
+echo -e "\n\n Installing Miniconda - Python - Jupyter - Latest \n\n"
 
 echo -e "----------\n"
 
-pyenv install anaconda3-2023.09-0
+pyenv install miniconda3-latest
 
-pyenv global anaconda3-2023.09-0
+pyenv global miniconda3-latest
 
 conda update -y conda
 
 echo -e "----------\n"
 
-echo -e "\n\n Installing AWS CLI \n\n"
+echo -e "\n\n Installing Pandas and AWS CLI \n\n"
 
 pip install --upgrade pip
+
+pip install pandas
 
 pip install awscli
 
@@ -32,15 +34,13 @@ pip install pyarrow
 
 echo -e "\n\n Installing Jupyter Notebook Extensions \n\n"
 
-pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install --user
+pip install jupyterlab notebook
+
+pip install jupyter_contrib_nbextensions
 
 echo -e "\n\n Installing Apache Sedona and Dependencies \n\n"
 
-pip install shapely
-pip install geopandas
-pip install attrs
-
-pip install apache-sedona
+pip install shapely geopandas attrs apache-sedona
 
 echo -e "\n\n\n----------\n"
 
