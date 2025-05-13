@@ -7,6 +7,7 @@
 # 1 = Everything [Recommended for new Developer Desktop Setups]
 # 2 = Just Python [Installs Pyenv, Miniconda-Latest, PIP, Python 3.13+, Jupyter Notebook Extensions and AWS-CLI]
 # 3 = Just Spark [Python 3.6+ and PIP should be preinstalled.]
+exec 3</dev/tty
 
 echo -e "\n\n--------------\n\nWelcome to Abhinav's super awesome ----- glorious ----- developer desktop setup script. \n\n--------------\n\n"
 echo -e "What would you like to Install? \n"
@@ -16,7 +17,7 @@ echo -e "3 = Just Spark [Python 3.6+ and PIP should be pre-installed.] \n\n"
 
 echo -e "Enter your input [1/2/3]:"
 
-read -r var </dev/tty
+read -r -u 3 var
 
 echo -e "Detecting Machine Architecture..."
 echo -e "\n\n\n"
@@ -40,7 +41,7 @@ esac
 while [ "${var:-0}" != 1 -a "${var:-0}" != 2 -a "${var:-0}" != 3 ]
 do
 	echo -e "Please choose between 1,2 or 3."
-	read -r var </dev/tty
+	read -r -u 3 var
 done
 
 cd ~
